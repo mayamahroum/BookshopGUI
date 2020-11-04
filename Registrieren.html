@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registrieren</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="Style.css">
+
+</head>
+<body>
+
+<div class="header">
+  <h1>Buchladen</h1>
+</div>
+
+<div class="navbar">
+  <a href="#" class="active">Registrieren</a>
+  <a href="#">Katalog</a>
+  <a href="#">Kalender</a>
+  <a href="#" class="right">Anmelden</a>
+</div>
+
+
+  <div class="center">
+    <h2>Wilkommen!</h2>
+</div>
+
+  <div class="center">
+
+	 <div class="form-group">
+		<label for="name" th:text="#{account.register.name}">Name</label><br />
+		<input class="form-control" type="text" th:field="*{name}" th:errorclass="is-invalid" required="required" />
+		<br>
+		<br>
+		<label for="Passwort" th:text="#{account.register.passwort}">Passwort</label><br />
+		<input class="form-control" type="text" th:field="*{Passwort}" th:errorclass="is-invalid" required="required" />
+		<br>
+		<br>
+			<label for="Adresse" th:text="#{account.register.Adresse}">Adresse</label><br />
+		<input class="form-control" type="text" th:field="*{Adresse}" th:errorclass="is-invalid" required="required" />
+		<br>
+		</br>
+		<button th:title="#{account.passwort.change}" class="btn btn-sm float-right">
+						Registrieren
+					</button>
+		<!-- <div th:if="${#fields.hasErrors('altespasswort')}" class="invalid-feedback" th:text="#{account.passwort.altespasswort.required}">Bitte altes Passwort eingeben</div> -->
+	</div>
+</div>
+
+<footer>
+<br>
+<br><br>
+<br>
+</footer>
+
+</body>
+</html>
